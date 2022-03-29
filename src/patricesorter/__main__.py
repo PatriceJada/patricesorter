@@ -110,17 +110,12 @@ def setup_logging(loglevel):
     )
 
 
-def main(args):
-    """Wrapper allowing :func:`fib` to be called with string arguments in a CLI fashion
-
-    Instead of returning the value from :func:`fib`, it prints the result to the
-    ``stdout`` in a nicely formatted message.
-
-    Args:
-      args (List[str]): command line parameters as list of strings
-          (for example  ``["--verbose", "42"]``).
-    """
-    args = parse_args(args)
+def main():
+    """This function launches the patricesorter."""
+    if len(sys.argv) == 1:
+        # if no command line args are passed, show the help options
+        parse_args(['-h'])
+    args = parse_args(sys.argv)
     setup_logging(args.loglevel)
     _logger.debug("Starting crazy calculations...")
     print("The {}-th Fibonacci number is {}".format(args.n, fib(args.n)))
@@ -132,18 +127,8 @@ def run():
 
     This function can be used as entry point to create console scripts with setuptools.
     """
-    main(sys.argv[1:])
+    main()
 
 
 if __name__ == "__main__":
-    # ^  This is a guard statement that will prevent the following code from
-    #    being executed in the case someone imports this file instead of
-    #    executing it as a script.
-    #    https://docs.python.org/3/library/__main__.html
-
-    # After installing your project with pip, users can also run your Python
-    # modules as scripts via the ``-m`` flag, as defined in PEP 338::
-    #
-    #     python -m patricesorter.skeleton 42
-    #
     run()
