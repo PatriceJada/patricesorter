@@ -1,3 +1,8 @@
+.. image:: https://readthedocs.org/projects/patricesorter/badge/?version=latest
+   :target: https://patricesorter.readthedocs.io/en/latest/?badge=latest
+   :alt: Documentation Status
+
+
 .. These are examples of badges you might want to add to your README:
    please update the URLs accordingly
 
@@ -22,10 +27,6 @@
     .. image:: https://img.shields.io/twitter/url/http/shields.io.svg?style=social&label=Twitter
         :alt: Twitter
         :target: https://twitter.com/patricesorter
-
-.. image:: https://img.shields.io/badge/-PyScaffold-005CA0?logo=pyscaffold
-    :alt: Project generated with PyScaffold
-    :target: https://pyscaffold.org/
 
 |
 

@@ -22,6 +22,7 @@ __pycache__/*
 .idea
 .vscode
 tags
+pip-wheel-metadata/
 
 # Package files
 *.egg
