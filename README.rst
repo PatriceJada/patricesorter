@@ -28,7 +28,8 @@ Usage
 
 ::
 
-   PS C:\Users\PMusoke\Documents\GitHub\myproto\patricesorter> patricesorter -h
+   PS C: patricesorter> patricesorter -h
+
    usage: patricesorter [-h] [-v] [-q] [--nargs NARGS [NARGS ...]] {} ...
 
    positional arguments:
@@ -46,7 +47,8 @@ Command Line
 
 ::
 
-   PS C:\Users\PMusoke\Documents\GitHub\myproto\patricesorter> patricesorter --nargs 60 20 50 1 4
+   PS C:patricesorter> patricesorter --nargs 60 20 50 1 4
+
    The ['60', '20', '50', '1', '4'] sorted to  ['1', '20', '4', '50', '60']  , the first price is 1 last price 60
 
 Interface
@@ -54,14 +56,24 @@ Interface
 
 ::
 
-   PS C:\Users\PMusoke\Documents\GitHub\myproto\patricesorter> python
+   PS C: patricesorter> python
+
    Python 3.7.4 (tags/v3.7.4:e09359112e, Jul  8 2019, 20:34:20) [MSC v.1916 64 bit (AMD64)] on win32
    Type "help", "copyright", "credits" or "license" for more information.
    >>> import patricesorter as ps
    >>> ps.sort_prices(['60', '20', '50', '1', '4'])
    (['1', '20', '4', '50', '60'], (First 1, Last 60))
 
+Using tox
+=========
 
+::
+
+    tox -e docs  # to build your documentation
+    tox -e build  # to build your package distribution
+    tox -e publish  # to test your project uploads correctly in test.pypi.org
+    tox -e publish -- --repository pypi  # to release your package to PyPI
+    tox -av  # to list all the tasks available
 
 
 .. _pyscaffold-notes:
