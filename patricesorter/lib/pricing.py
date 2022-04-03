@@ -13,3 +13,12 @@ class Price:
     def get_last(self):
         """Return last Element"""
         return self.last()
+
+
+def sort_prices(n):
+    """Sorted array of prices"""
+    sorted_data = sorted(n)
+    first_item = sorted_data[0]
+    last_item = sorted_data[-1]
+    price = Price(first=first_item, last=last_item)
+    return sorted_data, price

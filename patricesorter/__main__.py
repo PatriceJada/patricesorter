@@ -2,6 +2,7 @@ import logging
 import sys
 
 from patricesorter.lib.get_opts import parser
+from patricesorter.lib.pricing import sort_prices
 
 __author__ = "PatriceJada"
 __copyright__ = "PatriceJada"
@@ -94,10 +95,14 @@ def main():
         parser.parse_args(['-h'])
 
     else:
+
         # parse them
         args = parser.parse_args()
         # fib(int(args.nargs[0]))
-        print("The {}-th Fibonacci number is {}".format(args.nargs[0], fib(int(args.nargs[0]))))
+        sorted_data, price_object = sort_prices(args.nargs)
+        print("The {} sorted to  {}  , the first price is {} last price {}".format(args.nargs, sorted_data,
+                                                                                   price_object.first,
+                                                                                   price_object.last))
 
     # print (args)
     exit()
