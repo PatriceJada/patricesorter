@@ -4,6 +4,12 @@
 .. image:: https://github.com/PatriceJada/patricesorter/actions/workflows/python-package.yml/badge.svg?branch=master
    :alt: Python Workflow
    :target: https://github.com/PatriceJada/patricesorter/actions/workflows/python-package.yml
+.. image:: https://api.scorecard.dev/projects/github.com/PatriceJada/patricesorter/badge
+   :target: https://scorecard.dev/viewer/?uri=github.com/PatriceJada/patricesorter
+
+
+
+
 
 
 =============
